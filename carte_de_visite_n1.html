@@ -18,7 +18,7 @@
         .card {
             width: 85mm;
             height: 55mm;
-            background-color: #ffffff;
+            background-color: #e7dbc4;
             border-radius: 10px;
             border: none;
             box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
@@ -31,20 +31,22 @@
             overflow: hidden;
         }
         .card::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('banner.png') center/cover no-repeat;
-            opacity: 0.2; /* Réduction de l'opacité uniquement sur l'image */
-            z-index: 0;
+    content: "";
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    height: 50%;
+    background: url('logo.png') center center / contain no-repeat;
+    transform: translate(-50%, -50%);
+    opacity: 0.4;
+    z-index: 1;
         }
         .card h1 {
             font-size: 20px;
             font-weight: 600;
-            color: #333333;
+            color: #000000;
         }
         .subtitle {
             font-size: 12px;
@@ -52,32 +54,33 @@
             color: #666666;
             margin-top: 5px;
         }
-        .border-box {
-            position: absolute;
-            top: 5px;
-            left: 5px;
-            right: 5px;
-            bottom: 5px;
-            border: 4px solid #D4AF37; /* Doré antique */
-            border-radius: 8px;
-        }
         .slogan {
             font-size: 14px;
             font-weight: 600;
-            color: #003366;
-            margin-bottom: 100px;
-        }
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            position: absolute;
-            bottom: 10px;
-            left: 20px;
-            text-align: left;
-            font-size: 14px;
-            color: #333;
+            color: #000000;
+            text-align: center;
+            margin-bottom: 130px;
             z-index: 2;
         }
+        .contact-info-tel {
+    position: absolute;
+    bottom: 35px; /* Ajuste la hauteur */
+    left: 0px;
+    font-size: 14px;
+    color: #000000;
+    z-index: 2;
+    width: 100%;
+
+}
+
+.contact-info-email {
+    position: absolute;
+    bottom: 10px; /* Ajuste indépendamment la hauteur */
+    left: 20px;
+    font-size: 14px;
+    color: #000000;
+    z-index: 2;
+}
         .qr-code {
             position: absolute;
             bottom: 10px;
@@ -92,10 +95,12 @@
 <body>
     <div class="card">
         <div class="border-box"></div>
-        <h1>APP - BAUDINE Edwige</h1>
-        <p class="slogan">Nettoyage sur mesure pour un intérieur impeccable, que vous soyez particulier ou professionnel !</p>
-        <div class="contact-info">
+        <h1></h1>
+        <p class="slogan">Nettoyage sur mesure pour un intérieur impeccable, que vous soyez particulier ou professionnel !<br> Accompagnement administratif des entreprises efficace et adaptée à leurs besoins.</p>
+        <div class="contact-info-tel">
             <p><strong>Tél : 012345678</strong></p>
+        </div>
+        <div class="contact-info-email">
             <p><strong>Email : e.b-nettoyage@gmail.com</strong></p>
         </div>
         <div class="qr-code">
